@@ -7,11 +7,16 @@ const f_blindagem = document.querySelector("#f_blindagem");
 const f_municao = document.querySelector("#f_municao");
 const f_nome = document.querySelector("#f_nome");
 const f_portas = document.querySelector("#f_portas");
-
 const carros = document.querySelector("#carros");
 const btn_addCarro = document.querySelector("#btn_addCarro");
 
 let array_carros = [];
+
+const removerCarro = (quem) => {
+  array_carros = array_carros.filter((el) => {
+    return el.nome != quem;
+  });
+};
 
 f_tipoMilitar.addEventListener("click", (evt) => {
   f_nome.value = "";
@@ -34,11 +39,21 @@ const gerenciarExicibicaoCarros = () => {
   carros.innerHTML = "";
   array_carros.forEach((c) => {
     const div = document.createElement("div");
+    const btn = document.createElement("button");
+    btn.innerHTML = "remover";
+    btn.addEventListener("click", (evt) => {
+      const remover = evt.target.parentNode.dataset.nome;
+      removerCarro(remover);
+      gerenciarExicibicaoCarros();
+    });
     div.setAttribute("class", "carro");
+    div.setAttribute("data-nome", c.nome);
     div.innerHTML = `Nome: ${c.nome} <br/>`;
     div.innerHTML += `Portas: ${c.portas} <br/>`;
     div.innerHTML += `Blindagem: ${c.blindagem} <br/>`;
     div.innerHTML += `Municao: ${c.municao} <br/>`;
+    btn.innerHTML = "Remover";
+    div.appendChild(btn);
     carros.appendChild(div);
   });
 };
