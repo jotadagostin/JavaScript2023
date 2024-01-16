@@ -5,6 +5,8 @@ const display = document.querySelector(".display");
 const teclaOn = document.getAnimations("ton");
 const tLimpar = document.getElementById("tlimpar");
 const tIgual = document.getElementById("tigual");
+const tcpy = document.getElementById("tcpy");
+const teste = document.getElementById("teste");
 
 let sinal = false;
 let decimal = false;
@@ -57,4 +59,11 @@ tIgual.addEventListener("click", (evt) => {
   decimal = false;
   const res = eval(display.innerHTML);
   display.innerHTML = res;
+});
+
+tcpy.addEventListener("click", (evt) => {
+  navigator.clipboard.writeText(display.innerHTML);
+  // teste.select();
+  // teste.setSelectionRange(0, 999999); //mobile
+  // navigator.clipboard.writeText(teste.value());
 });
