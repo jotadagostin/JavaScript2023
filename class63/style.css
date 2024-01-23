@@ -1,4 +1,4 @@
-* {
+/* * {
   border: none;
   padding: 0px;
   margin: 0px;
@@ -17,4 +17,24 @@
   border: 3px solid #888;
   font-size: xx-large;
   font-weight: bold;
+} */
+
+* {
+  border: none;
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+.olhos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  width: 400px;
+  height: 200px;
+}
+.olho {
+  width: 200px;
+  height: 200px;
+  transform-origin: center center;
 }
