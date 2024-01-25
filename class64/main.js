@@ -84,8 +84,8 @@ class Bola {
 }
 
 window.addEventListener("resize", (evt) => {
-  let larguraPalco = palco.offsetWidth;
-  let alturaPalco = palco.offsetHeight;
+  larguraPalco = palco.offsetWidth;
+  alturaPalco = palco.offsetHeight;
 });
 
 btn_add.addEventListener("click", (evt) => {
