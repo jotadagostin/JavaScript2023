@@ -7,7 +7,7 @@ const btn_remover = document.getElementById("btn_remover");
 let larguraPalco = palco.offsetWidth;
 let alturaPalco = palco.offsetHeight;
 let bolas = [];
-let numBolas = 0;
+let numBola = 0;
 
 class Bola {
   constructor(arrayBolas, palco) {
@@ -18,17 +18,19 @@ class Bola {
     this.px = Math.floor(Math.random() * (larguraPalco - this.tam));
     this.py = Math.floor(Math.random() * (alturaPalco - this.tam));
     this.velx = Math.floor(Math.random() * 2) + 0.5;
+    this.vely = Math.floor(Math.random() * 2) + 0.5;
     this.dirx = Math.random() * 10 > 5 ? 1 : -1;
     this.diry = Math.random() * 10 > 5 ? 1 : -1;
     this.palco = palco;
     this.arrayBolas = arrayBolas;
-    this.id = Date.now() + "_" + Math.floor(Math.random() * 100000000000);
+    this.id = Date.now() + "_" + Math.floor(Math.random() * 100000000000000);
     this.desenhar();
     this.controle = setInterval(this.controlar, 10);
     this.eu = document.getElementById(this.id);
-    numBolas++;
-    num_objetos.innerHTML = numBolas;
+    numBola++;
+    num_objetos.innerHTML = numBola;
   }
+
   minhaPos = () => {
     return this.arrayBolas.indexOf(this);
   };
@@ -41,8 +43,8 @@ class Bola {
       }
     });
     this.eu.remove();
-    numBolas--;
-    num_objetos.innerHTML = numBolas;
+    numBola--;
+    num_objetos.innerHTML = numBola;
   };
 
   desenhar = () => {
@@ -56,13 +58,13 @@ class Bola {
     this.palco.appendChild(div);
   };
 
-  colisao_bordas = () => {
+  controle_bordas = () => {
     if (this.px + this.tam >= larguraPalco) {
       this.dirx = -1;
     } else if (this.px <= 0) {
       this.dirx = 1;
     }
-    if (this.py + this.tam >= larguraPalco) {
+    if (this.py + this.tam >= alturaPalco) {
       this.diry = -1;
     } else if (this.py <= 0) {
       this.diry = 1;
@@ -70,9 +72,9 @@ class Bola {
   };
 
   controlar = () => {
-    this.colisao_bordas();
-    this.px += dirx * this.velx;
-    this.py += diry * this.vely;
+    this.controle_bordas();
+    this.px += this.dirx * this.velx;
+    this.py += this.diry * this.vely;
     this.eu.setAttribute(
       "style",
       `left:${this.px}px;top:${this.py}px;width:${this.tam}px;height:${this.tam}px;background-color:rgb(${this.r},${this.g},${this.b})`
