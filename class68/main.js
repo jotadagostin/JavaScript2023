@@ -14,7 +14,17 @@ const computador = {
 };
 
 computador["monitor"] = "22pl";
-console.log(computador);
+computador.placaVideo = "rtx";
+delete computador.hd;
+
+const c1 = Object.assign({}, computador);
+
+c1.info();
+
+const o1 = { obj1: "1" };
+const o2 = { obj2: "1" };
+const o3 = { obj3: "1" };
+const o4 = Object.assign(o1, o2, o3);
 
 const computadores = [
   {
