@@ -21,6 +21,14 @@ const c1 = Object.assign({}, computador);
 
 c1.info();
 
+const c2 = Object.create(computador);
+c2.cpu = "i9";
+c2.ram = "32gb";
+c2.hd = "2tb";
+c2.inf();
+
+c2.info();
+
 const o1 = { obj1: "1" };
 const o2 = { obj2: "1" };
 const o3 = { obj3: "1" };
