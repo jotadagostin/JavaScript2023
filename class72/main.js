@@ -30,10 +30,16 @@ let Jogadores = [
   new Jogador("j4"),
 ];
 
-let s1 = Jogadores[0].id;
+// let s1 = Jogadores[0].id;
+let s = [];
 
-Jogadores = Jogadores.filter((j) => {
-  return j.id != s1;
+let s_jogadores = Jogadores.filter((j) => {
+  return j.nome != "j1";
 });
 
-console.log(Jogadores);
+s = s_jogadores.map((j) => {
+  return j.id;
+});
+
+console.log(s_jogadores);
+console.log(s);
