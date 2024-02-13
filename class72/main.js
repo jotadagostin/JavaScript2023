@@ -1,45 +1,17 @@
-//funcao symbol
+const nome = Symbol("nome");
+const numero = Symbol("nome");
+const corUniforme = Symbol("nome");
 
-// const s1 = Symbol();
-// const s2 = Symbol();
-// const s3 = Symbol.for("bruno");
-// const s4 = Symbol.for("canal");
+const jogador = {
+  [nome]: "j1",
+  [numero]: 10,
+  [corUniforme]: "amarelo",
+};
 
-// console.log(s1);
-// console.log(s2);
-
-// console.log(s3 === s4);
-
-// console.log(typeof s1);
-
-// console.log(Symbol.keyFor(s3));
-// console.log(Symbol.keyFor(s4));
-// console.log(Symbol.keyFor(s1));
-
-class Jogador {
-  constructor(nome) {
-    this.nome = nome;
-    this.id = Symbol();
-  }
+for (p in jogador) {
+  console.log(p);
 }
 
-let Jogadores = [
-  new Jogador("j1"),
-  new Jogador("j2"),
-  new Jogador("j3"),
-  new Jogador("j4"),
-];
-
-// let s1 = Jogadores[0].id;
-let s = [];
-
-let s_jogadores = Jogadores.filter((j) => {
-  return j.nome != "j1";
-});
-
-s = s_jogadores.map((j) => {
-  return j.id;
-});
-
-console.log(s_jogadores);
-console.log(s);
+console.log(jogador[nome]);
+console.log(jogador[numero]);
+console.log(jogador[corUniforme]);
