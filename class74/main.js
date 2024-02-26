@@ -11,20 +11,21 @@ let anima = null;
 
 const move = (direcao) => {
   carro.style.left = parseInt(carro.style.left) - 10 * direcao + "px";
+  anima = setTimeout(move, 20, direcao);
 };
 
 btn_parar.addEventListener("click", () => {
-  clearInterval(anima);
+  clearTimeout(anima);
 });
 
 btn_esquerda.addEventListener("click", () => {
-  clearInterval(anima);
-  anima = setInterval(move, 20, -1);
+  clearTimeout(anima);
+  move(-1);
 });
 
 btn_direita.addEventListener("click", () => {
-  clearInterval(anima);
-  anima = setInterval(move, 20, 1);
+  clearTimeout(anima);
+  move(1);
 });
 
 window.onload = init;
