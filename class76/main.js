@@ -5,7 +5,7 @@ const f_msg = document.querySelector("#f_msg");
 document.querySelector("#btn_validar").addEventListener("click", (evt) => {
   let msg = null;
 
-  if (f_nota.checkValidity()) {
+  if (!f_nota.checkValidity()) {
     msg = f_nota.validationMessage;
   }
 
