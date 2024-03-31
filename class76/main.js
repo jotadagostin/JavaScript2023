@@ -3,12 +3,12 @@ const f_nota = document.querySelector("#f_nota");
 const f_msg = document.querySelector("#f_msg");
 
 document.querySelector("#btn_validar").addEventListener("click", (evt) => {
-  let msg = null;
+  let estadoValicidacao = f_nota.validity;
 
-  if (!f_nota.checkValidity()) {
-    msg = f_nota.validationMessage;
+  if (estadoValicidacao.valueMissing) {
+    f_nota.setCustomValidity("este campo eh obrigatorio");
   }
-
-  f_msg.innerHTML = msg;
+  // f_nota.reportValidity();
+  f_msg.innerHTML = f_nota.validationMessage;
   evt.preventDefault();
 });
