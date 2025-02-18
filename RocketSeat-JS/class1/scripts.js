@@ -1,6 +1,7 @@
-console.log("hello word!");
-console.log("Essa mensagem eh do navegador conectado");
+// var product = "Teclado mencanico";
+// var Product = "Mouse gamer";
+// var product = "Fone sem fio";
+// console.log(product);
 
-const nameUSer = "Joao";
-
-console.log(nameUSer);
+let user;
+console.log("Paulo");
