@@ -22,3 +22,20 @@ let number = 5;
 console.log(number);
 
 console.log(12.5 / 2);
+
+// Boolen: true or false
+
+let isLoading = true;
+console.log(isLoading);
+
+// undefined e nulll
+let emptiness = null;
+console.log("O valor e: ", emptiness);
+
+// conversao de tipos: type conversation:
+
+console.log(typeof Number("9"));
+
+let age = 18;
+console.log(typeof age.toString());
+console.log(typeof String(age));
