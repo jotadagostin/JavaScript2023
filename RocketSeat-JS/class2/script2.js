@@ -30,3 +30,12 @@ let balance = 500;
 let payment = 120;
 
 console.log(balance >= payment);
+
+//operadores logicos && (AND) || (OR)
+console.log("...........................");
+
+let email = true;
+let password = true;
+
+console.log(email && password);
+console.log(email || password);
