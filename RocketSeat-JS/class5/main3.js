@@ -6,7 +6,7 @@ const input = document.querySelector("input");
 //EVENTS:
 
 window.addEventListener("load", () => {
-  console.log("A pagina foi carregada");
+  console.log("");
 });
 
 addEventListener("click", (event) => {
