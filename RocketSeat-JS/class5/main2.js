@@ -10,19 +10,19 @@
 //const button = document.querySelector("button");
 //button.style.backgroundColor = "red";
 
-const guests = document.querySelector("ul");
+// const guests = document.querySelector("ul");
 
-const newGuests = document.createElement("li");
-newGuests.classList.add("guest");
-const guestName = document.createElement("span");
+// const newGuests = document.createElement("li");
+// newGuests.classList.add("guest");
+// const guestName = document.createElement("span");
 
-guestName.textContent = "Diego";
+// guestName.textContent = "Diego";
 
-const newName = document.createElement("span");
-newName.textContent = "Fernandes";
+// const newName = document.createElement("span");
+// newName.textContent = "Fernandes";
 
-//add after the last child
-newGuests.append(guestName);
-newGuests.append(newName);
+// //add after the last child
+// newGuests.append(guestName);
+// newGuests.append(newName);
 
-guests.append(newGuests);
+// guests.append(newGuests);

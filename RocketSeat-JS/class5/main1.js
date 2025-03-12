@@ -7,10 +7,10 @@
 //console.log(guest6);
 //console.log("------------------------------------------------");
 
-const guestPRO = document.querySelector("#guest-1");
-console.log(guestPRO.textContent);
+// const guestPRO = document.querySelector("#guest-1");
+// console.log(guestPRO.textContent);
 
-guestPRO.textContent = "Jota";
-console.log(guestPRO.textContent); // retorna conteudo visivel e oculto
-console.log(guestPRO.innerHTML); // retorna o conteudo visivel
-console.log(guestPRO.innerText); // retorna o html como texto
+// guestPRO.textContent = "Jota";
+// console.log(guestPRO.textContent); // retorna conteudo visivel e oculto
+// console.log(guestPRO.innerHTML); // retorna o conteudo visivel
+// console.log(guestPRO.innerText); // retorna o html como texto
