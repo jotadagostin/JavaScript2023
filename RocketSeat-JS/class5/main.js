@@ -1,20 +1,51 @@
-//Vizualizar o conteudo do document
-// console.log(document);
+const addButton = document.querySelector(".shopping-item button");
+const itemInput = document.getElementById("item");
+const itemsContainer = document.querySelector(".items");
+const removeMessage = document.querySelector(".remove-item");
 
-//obter o title da pagina
-// console.log(document.title);
+// Função para adicionar um item
+function addItem() {
+  const itemName = itemInput.value.trim();
+  if (itemName === "") return; // Não adiciona se o campo estiver vazio
 
-// const guest = document.getElementById("guest-2");
-// console.log(guest);
+  // Criando o HTML do novo item
+  const newItem = document.createElement("div");
+  newItem.classList.add("item");
 
-// console.dir();
+  newItem.innerHTML = `
+    <input type="checkbox" />
+    <label>${itemName}</label>
+    <img src="assets/icons/trash.svg" alt="Delete" class="delete" />
+  `;
 
-//acessar elemento com classs
+  // Adiciona o item à lista
+  itemsContainer.appendChild(newItem);
 
-// const guestsByclass = document.getElementsByClassName("guest");
-// console.log(guestsByclass);
-// console.log(guestsByclass.item(0));
-// console.log(guestsByclass[1]);
+  // Limpa o campo de input após adicionar
+  itemInput.value = "";
 
-// const guestTag = document.getElementsByTagName("li");
-// console.log(guestTag);
+  // Exibir a mensagem de "item removido" por um tempo
+  removeMessage.style.display = "none";
+}
+
+// Função para remover um item
+function removeItem(event) {
+  if (event.target.classList.contains("delete")) {
+    const itemToRemove = event.target.closest(".item");
+    itemToRemove.remove();
+
+    // Mostrar mensagem de item removido
+    removeMessage.style.display = "block";
+
+    // Esconder a mensagem após 2 segundos
+    setTimeout(() => {
+      removeMessage.style.display = "none";
+    }, 2000);
+  }
+}
+
+// Adiciona o item ao clicar no botão
+addButton.addEventListener("click", addItem);
+
+// Adiciona o evento para remover itens ao clicar no ícone de lixeira
+itemsContainer.addEventListener("click", removeItem);
