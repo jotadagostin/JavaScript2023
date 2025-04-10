@@ -28,3 +28,77 @@ let number = 7;
 for (step = 0; step <= 10; step++) {
   console.log(`${number} x ${step} = ${number * step}`);
 }
+
+// for...in executa interacoes a partir de um objeto e percorre as propriedades:
+let person = {
+  name: "Rodrigo",
+  surname: "Goncalvez",
+  email: "email@email.com",
+};
+
+let steps = 1;
+
+for (let property in person) {
+  // if (Object.prototype.hasOwnProperty.call(object, property)) {
+  //   const element = object[property];
+  //   for (let property = 0; index < array.length; index++) {
+  //     const element = array[index];
+  //   }
+  // }
+  console.log(steps);
+
+  //exibe o nome da propriedade
+  console.log(property);
+  //exibe o conteudo da propriedade
+  console.log(person[property]);
+}
+
+// for (let student in students) {
+//   // console.log(student);
+// }
+
+// for of intera sobre valores de um objeto iteravel
+let students = ["Rodrigo", "Joao", "Amanda"];
+
+for (const student of students) {
+  console.log(student);
+}
+
+// break encerra e execucao da repeticao ou switch para seguir para a instrucao seguinte:
+
+let option = 2;
+
+switch (option) {
+  case 1:
+    console.log("Cadastrar");
+    break;
+
+  case 2:
+    console.log("Atualizar");
+    break;
+
+  case 3:
+    console.log("Remover");
+    break;
+
+  default:
+    console.log("Opcao invalida");
+    break;
+}
+//Utilizando o break para finalizar a repeticao:
+
+for (let i = 0; i < 10; i++) {
+  if (i === 5) {
+    break;
+  }
+  console.log(i);
+}
+
+// continue encerra(pula) a execucao das instrucoes na interacao atual e continua a execucao do loop com a proxima interacao:
+
+for (let i = 0; i < 10; i++) {
+  if (i === 5) {
+    continue;
+  }
+  console.log(i);
+}
