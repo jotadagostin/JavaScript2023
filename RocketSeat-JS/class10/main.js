@@ -88,3 +88,13 @@ console.log(cat.name);
 
 cat.makeNoise();
 cat.run();
+
+const adress = {
+  city: "Sao Paulo",
+  country: "Brasil",
+};
+
+console.log(adress); //prototype objeto
+
+const userProt = ["Joao", "Maria,", "Pedro"];
+console.log(userProt); //prototype array
