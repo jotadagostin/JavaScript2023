@@ -49,3 +49,26 @@ const index = values.findIndex((value) => value > 4);
 console.log(index);
 console.log(values[index]);
 console.log(values.findIndex((value) => value > 12));
+
+// metodo find() retorna o primeiro elemento do array que satisfazer a condicao:
+
+const valuesFind = [5, 12, 8, 20, 44];
+const found = valuesFind.find((value) => value > 10);
+console.log(found);
+
+//exemplo com objetos:
+const fruits = [
+  { name: "Apples", quantity: 23 },
+  { name: "Bananas", quantity: 24 },
+  { name: "Oranges", quantity: 25 },
+];
+
+const search = fruits.find((fruit) => fruit.name === "Pineapple");
+console.log(search);
+
+// every(): testa se todos os elementos passam na condicao e retorna um boolean:
+
+// exemplo de array de idades:
+const ages = [18, 30, 29, 49];
+const resultAge = ages.every((age) => age >= 18);
+console.log(resultAge);
