@@ -72,3 +72,33 @@ console.log(search);
 const ages = [18, 30, 29, 49];
 const resultAge = ages.every((age) => age >= 18);
 console.log(resultAge);
+
+// every() testa se todos os array passam na condicao e retorna um valor boolena:
+
+const agesEvery = [19, 39, 29, 30];
+//verificar se todo as idades sao maiores ou igual a 18
+const resultEvery = agesEvery.every((ageEvery) => ageEvery >= 18);
+console.log(resultEvery); //false porque todos os itens tem que atender a condicao
+console.log(
+  "---------------------------------------------------------------------"
+);
+
+// metodo some()- testa se ao menos um dos elementos no array passa na condicao e retrno um boolen
+const agesSome = [15, 30, 39, 29];
+const resultSome = agesSome.some((agesSome) => agesSome < 18);
+console.log(resultSome);
+
+// metodo reduce( ) -  reduzir um array a um unico valor
+const valueReduce = [1, 2, 3, 4, 5];
+const sumReduce = values.reduce((accumulator, currentValue, index) => {
+  console.log("ACUMULADOR", accumulator);
+  console.log("CURRENT VALUE", currentValue);
+  console.log("INDEX", index);
+
+  console.log("SOMA", accumulator + currentValue);
+  console.log("-----------------");
+
+  return accumulator + currentValue;
+}, 0);
+
+console.log("Resultado da soma final: ", sumReduce);
