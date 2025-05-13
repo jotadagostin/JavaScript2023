@@ -26,7 +26,7 @@ function asyncFunction() {
     //simular uma operacao assincrona.
 
     setTimeout(() => {
-      const isSucess = true;
+      const isSucess = false;
 
       if (isSucess) {
         resolve("A operacao foi concluida com sucesso");
@@ -37,16 +37,25 @@ function asyncFunction() {
   });
 }
 
-console.log("Executando funcao assinctrona: ");
+const fetch = async () => {
+  try {
+    const response = await asyncFunction();
+    console.log("Sucesso: ", response);
+  } catch {
+    console.log("Error: ", error);
+  } finally {
+    console.log("fim da execucacao");
+  }
+};
 
-// vizualizando que o retorno e uma promisse:
-asyncFunction()
-  .then((response) => {
-    console.log("Sucesso", response);
-  })
-  .catch((error) => {
-    console.log("Error", error);
-  })
-  .finally(() => {
-    console.log("fim da execucao");
-  });
+//ou
+
+// async function fecth() {
+//     const response = await asyncFunction()
+//     console.log(response);
+
+// }
+
+fetch();
+
+//-----------------------------------------------------------------------------------
