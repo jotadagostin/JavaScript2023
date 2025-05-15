@@ -1,2 +1,3 @@
-const now = dayjs();
-console.log(now.format("DD/MM/YYYY - HH:mm"));
+const response = fetch("http://localhost:3333/products").then((response) => {
+  console.log(response);
+});
