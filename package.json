@@ -1,5 +1,9 @@
 {
+  "scripts": {
+    "server": "json-server server.json --port=3333"
+  },
   "dependencies": {
-    "dayjs": "^1.11.13"
+    "dayjs": "^1.11.13",
+    "json-server": "^1.0.0-alpha.17"
   }
 }
