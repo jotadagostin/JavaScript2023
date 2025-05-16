@@ -1,7 +1,39 @@
 {
   "products": [
-    { "id": "1", "name": "Mouse", "price": 150.25 },
-    { "id": "1", "name": "Teclado", "price": 250.25 },
-    { "id": "1", "name": "Monitor", "price": 450.25 }
+    {
+      "id": "1",
+      "name": "Mouse",
+      "price": 150.25
+    },
+    {
+      "id": "2",
+      "name": "Teclado",
+      "price": 250.25
+    },
+    {
+      "id": "3",
+      "name": "Monitor",
+      "price": 450.25
+    },
+    {
+      "id": "1747384637635",
+      "name": "teste",
+      "price": "234"
+    },
+    {
+      "id": "1747384638671",
+      "name": "",
+      "price": ""
+    },
+    {
+      "id": "1747384639477",
+      "name": "",
+      "price": ""
+    },
+    {
+      "id": "1747384687709",
+      "name": "mesa",
+      "price": " 1220"
+    }
   ]
 }
