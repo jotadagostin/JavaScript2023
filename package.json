@@ -1,9 +1,16 @@
 {
   "scripts": {
-    "server": "json-server server.json --port=3333"
+    "server": "json-server server.json --port=3333",
+    "build": "babel main-compiladores.js  --out-dir ./dist",
+    "dev": "babel main-compiladores.js --watch --out-dir ./dist"
   },
   "dependencies": {
     "dayjs": "^1.11.13",
     "json-server": "^1.0.0-alpha.17"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.27.2",
+    "@babel/core": "^7.27.1",
+    "@babel/preset-env": "^7.27.2"
   }
 }
