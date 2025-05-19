@@ -1,8 +1,7 @@
 {
   "scripts": {
-    "server": "json-server server.json --port=3333",
-    "build": "webpack ./src/js/index.js",
-    "dev": "babel main-compiladores.js --watch --out-dir ./dist"
+    "build": "webpack",
+    "dev": "webpack serve"
   },
   "dependencies": {
     "dayjs": "^1.11.13",
@@ -12,7 +11,12 @@
     "@babel/cli": "^7.27.2",
     "@babel/core": "^7.27.1",
     "@babel/preset-env": "^7.27.2",
+    "babel-loader": "^10.0.0",
+    "css-loader": "^7.1.2",
+    "html-minimizer-webpack-plugin": "^5.0.2",
+    "style-loader": "^4.0.0",
     "webpack": "^5.99.8",
-    "webpack-cli": "^6.0.1"
+    "webpack-cli": "^6.0.1",
+    "webpack-dev-server": "^5.2.1"
   }
 }
